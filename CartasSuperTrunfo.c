@@ -4,12 +4,14 @@ int main() {
     
     //Carta 1 (estado a-h)
     char estado1, nomeCidade1[50], codigo1[5];
-    int populacao1, pontosTuristicos1;
+    unsigned long int populacao1;
+    int pontosTuristicos1;
     double area1, pib1, densidade1, percap1;
 
     //Carta 2
     char estado2, codigo2[5], nomeCidade2[50];
-    int populacao2,pontosTuristicos2;
+    unsigned long int populacao2;
+    int pontosTuristicos2;
     double area2, pib2, densidade2, percap2;
 
     printf("-----------------------Cadastre a primeira carta-----------------------\n");
