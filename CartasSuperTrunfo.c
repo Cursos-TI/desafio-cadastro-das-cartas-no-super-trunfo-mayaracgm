@@ -46,9 +46,9 @@ int main() {
     }
 
     if (densidade1 > 0.0) {
-        superPoder1 = populacao1 + area1 + pib1 + pontosTuristicos1 + (1.0 / densidade1);
+        superPoder1 = populacao1 + area1 + pib1 + pontosTuristicos1 + (1.0 / densidade1) + percap1 ;
     } else {
-        superPoder1 = populacao1 + area1 + pib1 + pontosTuristicos1;
+        superPoder1 = populacao1 + area1 + pib1 + pontosTuristicos1 + percap1;
         printf("Aviso: Densidade da Carta 1 é zero, inverso não incluído no Super Poder.\n");
     }
 
@@ -92,9 +92,9 @@ int main() {
     }
 
     if (densidade2 > 0.0) {
-        superPoder2 = populacao2 + area2 + pib2 + pontosTuristicos2 + (1.0 / densidade2);
+        superPoder2 = populacao2 + area2 + pib2 + pontosTuristicos2 + (1.0 / densidade2) + percap2;
     } else {
-        superPoder2 = populacao2 + area2 + pib2 + pontosTuristicos2;
+        superPoder2 = populacao2 + area2 + pib2 + pontosTuristicos2  + percap2;
         printf("Aviso: Densidade da Carta 2 é zero, inverso não incluído no Super Poder.\n");
     } 
 
@@ -109,7 +109,7 @@ int main() {
     printf("PIB: %.2f bilhoes de reais\n", pib1); 
     printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos1);
     printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
-    printf("PIB per capita: %.2f bilhões/habitante\n", percap1); 
+    printf("PIB per capita: %.2f por habitante\n", percap1); 
     printf("----------------------- Carta 2 -----------------------\n"); 
     printf("Estado: %c\n", estado2); 
     printf("Codigo: %s\n", codigo2); 
@@ -119,7 +119,7 @@ int main() {
     printf("PIB: %.2f bilhoes de reais\n", pib2); 
     printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos2);
     printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
-    printf("PIB per capita: %.2f bilhões/habitante\n", percap2);
+    printf("PIB per capita: %.2f por habitante\n", percap2);
 
     printf("------------------- Comparação das Cartas -------------------\n");
 
