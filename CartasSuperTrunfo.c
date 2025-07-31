@@ -52,7 +52,7 @@ int main() {
         printf("Aviso: Densidade da Carta 1 é zero, inverso não incluído no Super Poder.\n");
     }
 
-    printf("Super Poder da Carta 1: %.2f\n", superPoder1); 
+    printf("Super Poder da Carta 1: %.2lf\n", superPoder1); 
 
     // Segunda carta
     printf("-----------------------Cadastre a segunda carta-----------------------\n");
@@ -98,28 +98,28 @@ int main() {
         printf("Aviso: Densidade da Carta 2 é zero, inverso não incluído no Super Poder.\n");
     } 
 
-    printf("Super Poder da Carta 2: %.2f\n", superPoder2);
+    printf("Super Poder da Carta 2: %.2lf\n", superPoder2);
 
     printf("----------------------- Carta 1-----------------------\n"); 
     printf("Estado: %c\n", estado1); 
     printf("Codigo: %s\n", codigo1); 
     printf("Cidade: %s\n", nomeCidade1); 
     printf("Populacao: %lu habitantes\n", populacao1); 
-    printf("Area: %.2f km²\n", area1); 
-    printf("PIB: %.2f bilhoes de reais\n", pib1); 
+    printf("Area: %.2lf km²\n", area1); 
+    printf("PIB: %.2lf bilhoes de reais\n", pib1); 
     printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos1);
-    printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
-    printf("PIB per capita: %.2f por habitante\n", percap1); 
+    printf("Densidade Populacional: %.2lf hab/km²\n", densidade1);
+    printf("PIB per capita: %.2lf por habitante\n", percap1); 
     printf("----------------------- Carta 2 -----------------------\n"); 
     printf("Estado: %c\n", estado2); 
     printf("Codigo: %s\n", codigo2); 
     printf("Nome da Cidade: %s\n", nomeCidade2); 
     printf("Populacao: %lu\n", populacao2); 
-    printf("Area: %.2f km²\n", area2); 
-    printf("PIB: %.2f bilhoes de reais\n", pib2); 
+    printf("Area: %.2lf km²\n", area2); 
+    printf("PIB: %.2lf bilhoes de reais\n", pib2); 
     printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos2);
-    printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
-    printf("PIB per capita: %.2f por habitante\n", percap2);
+    printf("Densidade Populacional: %.2lf hab/km²\n", densidade2);
+    printf("PIB per capita: %.2lf por habitante\n", percap2);
 
     printf("------------------- Comparação das Cartas -------------------\n");
 
