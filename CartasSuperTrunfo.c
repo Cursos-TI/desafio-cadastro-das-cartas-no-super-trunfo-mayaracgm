@@ -2,19 +2,10 @@
 
 int main() {
     
-    //Carta 1 (estado a-h)
-    char estado1, nomeCidade1[50], codigo1[5];
-    unsigned long int populacao1;
-    int pontosTuristicos1;
-    double area1, pib1, densidade1, percap1;
-    float superPoder1;
-
-    //Carta 2
-    char estado2, codigo2[5], nomeCidade2[50];
-    unsigned long int populacao2;
-    int pontosTuristicos2;
-    double area2, pib2, densidade2, percap2;
-    float superPoder2;
+    unsigned long populacao1, populacao2;
+    int pontosTuristicos1, pontosTuristicos2;
+    char estado1, estado2, codigo1[10], codigo2[10], nomeCidade1[100], nomeCidade2[100];
+    double densidade1, densidade2,area1, area2, percap1, percap2, superPoder1, superPoder2, pib1, pib2;
 
     printf("-----------------------Cadastre a primeira carta-----------------------\n");
     printf("Estado (A-H): ");
@@ -39,12 +30,29 @@ int main() {
 
     printf("Numero de Pontos Turisticos: ");
     scanf("%d", &pontosTuristicos1);
+    
+   if (area1 > 0.0) {
+        densidade1 = (double)populacao1 / area1;
+    } else {
+        densidade1 = 0.0;
+        printf("Aviso: Área da Carta 1 é zero, densidade populacional não calculada.\n");
+    }
 
-    densidade1 = (double)populacao1/area1;
-    percap1 = (pib1* 1000000000.0)/populacao1;
+    if (populacao1 > 0) {
+        percap1 = (pib1 * 1000000000.0) / populacao1;
+    } else {
+        percap1 = 0.0;
+        printf("Aviso: População da Carta 1 é zero, PIB per capita não calculado.\n");
+    }
 
-   superPoder1 = (float)populacao1 + (float)area1 + (float)pib1 + (float)pontosTuristicos1 + (float)percap1 + (float)(1.0 / densidade1);
-   printf("Super Poder da Carta 1: %.2f\n", superPoder1); 
+    if (densidade1 > 0.0) {
+        superPoder1 = populacao1 + area1 + pib1 + pontosTuristicos1 + (1.0 / densidade1);
+    } else {
+        superPoder1 = populacao1 + area1 + pib1 + pontosTuristicos1;
+        printf("Aviso: Densidade da Carta 1 é zero, inverso não incluído no Super Poder.\n");
+    }
+
+    printf("Super Poder da Carta 1: %.2f\n", superPoder1); 
 
     // Segunda carta
     printf("-----------------------Cadastre a segunda carta-----------------------\n");
@@ -69,12 +77,28 @@ int main() {
     printf("Numero de Pontos Turisticos: ");
     scanf("%d", &pontosTuristicos2);
 
-    densidade2 = (double)populacao2/area2;
-    percap2 = (pib2* 1000000000.0) / populacao2;
+     if (area2 > 0.0) {
+        densidade2 = (double)populacao2 / area2;
+    } else {
+        densidade2 = 0.0;
+        printf("Aviso: Área da Carta 2 é zero, densidade populacional não calculada.\n");
+    }
 
-    superPoder2 = (float)populacao2 + (float)area2 + (float)pib2 + (float)pontosTuristicos2 + (float)percap2 + (float)(1.0 / densidade2);
-    printf("Super Poder da Carta 2: %.2f\n", superPoder2); 
+    if (populacao2 > 0) {
+        percap2 = (pib2 * 1000000000.0) / populacao2;
+    } else {
+        percap2 = 0.0;
+        printf("Aviso: População da Carta 2 é zero, PIB per capita não calculado.\n");
+    }
 
+    if (densidade2 > 0.0) {
+        superPoder2 = populacao2 + area2 + pib2 + pontosTuristicos2 + (1.0 / densidade2);
+    } else {
+        superPoder2 = populacao2 + area2 + pib2 + pontosTuristicos2;
+        printf("Aviso: Densidade da Carta 2 é zero, inverso não incluído no Super Poder.\n");
+    } 
+
+    printf("Super Poder da Carta 2: %.2f\n", superPoder2);
 
     printf("----------------------- Carta 1-----------------------\n"); 
     printf("Estado: %c\n", estado1); 
