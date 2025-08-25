@@ -121,7 +121,7 @@ int main() {
     printf("Densidade Populacional: %.2lf hab/km²\n", densidade2);
     printf("PIB per capita: %.2lf por habitante\n", percap2);
 
-    printf("------------------- Comparação das Cartas -------------------\n");
+    printf("--------------------- Comparação das Cartas ---------------------\n");
 
 // Nos seguintes casos, 1 indica vitória da Carta 1, 0 indica vitória da Carta 2
 printf("População - Carta 1 vence? %d\n", populacao1 > populacao2);
