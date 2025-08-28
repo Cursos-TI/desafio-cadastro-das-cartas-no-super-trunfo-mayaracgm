@@ -2,6 +2,7 @@
 
 int main() {
     
+    //não é negativo e aceita até 4 bilhões ou mais
     unsigned long populacao1, populacao2;
     int pontosTuristicos1, pontosTuristicos2;
     char estado1, estado2, codigo1[10], codigo2[10], nomeCidade1[100], nomeCidade2[100];
@@ -123,7 +124,7 @@ int main() {
 
     printf("--------------------- Comparação das Cartas ---------------------\n");
 
-// Nos seguintes casos, 1 indica vitória da Carta 1, 0 indica vitória da Carta 2
+//1 indica vitória da Carta 1, 0 indica vitória da Carta 2
 printf("População - Carta 1 vence? %d\n", populacao1 > populacao2);
 printf("Área - Carta 1 vence? %d\n", area1 > area2);
 printf("PIB - Carta 1 vence? %d\n", pib1 > pib2);
@@ -131,5 +132,98 @@ printf("Pontos Turísticos - Carta 1 vence? %d\n", pontosTuristicos1 > pontosTur
 printf("Densidade Populacional - Carta 1 vence? %d\n", densidade1 < densidade2); // menor vence
 printf("PIB per capita - Carta 1 vence? %d\n", percap1 > percap2);
 printf("Super Poder - Carta 1 vence? %d\n", superPoder1 > superPoder2);
+
+    int opcao;
+
+    printf("\n--------------------- MENU DE COMPARAÇÃO ---------------------\n");
+    printf("Escolha o atributo para comparar:\n");
+    printf("1 - População\n");
+    printf("2 - Área\n");
+    printf("3 - PIB\n");
+    printf("4 - Número de Pontos Turísticos\n");
+    printf("5 - Densidade Demográfica\n");
+    printf("6 - PIB per capita\n");
+    printf("7 - Super Poder\n");
+    printf("Digite sua opção: ");
+    scanf("%d", &opcao);
+
+    printf("\nComparando %s vs %s\n", nomeCidade1, nomeCidade2);
+
+    switch (opcao) {
+        case 1:
+            printf("População: %lu vs %lu\n", populacao1, populacao2);
+            if (populacao1 > populacao2)
+                printf("Carta 1 vence!\n");
+            else if (populacao2 > populacao1)
+                printf("Carta 2 vence!\n");
+            else
+                printf("Empate!\n");
+            break;
+
+        case 2:
+            printf("Área: %.2lf km² vs %.2lf km²\n", area1, area2);
+            if (area1 > area2)
+                printf("Carta 1 vence!\n");
+            else if (area2 > area1)
+                printf("Carta 2 vence!\n");
+            else
+                printf("Empate!\n");
+            break;
+
+        case 3:
+            printf("PIB: %.2lf bilhões vs %.2lf bilhões\n", pib1, pib2);
+            if (pib1 > pib2)
+                printf("Carta 1 vence!\n");
+            else if (pib2 > pib1)
+                printf("Carta 2 vence!\n");
+            else
+                printf("Empate!\n");
+            break;
+
+        case 4:
+            printf("Pontos Turísticos: %d vs %d\n", pontosTuristicos1, pontosTuristicos2);
+            if (pontosTuristicos1 > pontosTuristicos2)
+                printf("Carta 1 vence!\n");
+            else if (pontosTuristicos2 > pontosTuristicos1)
+                printf("Carta 2 vence!\n");
+            else
+                printf("Empate!\n");
+            break;
+
+        case 5:
+            printf("Densidade Demográfica: %.2lf hab/km² vs %.2lf hab/km²\n", densidade1, densidade2);
+            if (densidade1 < densidade2)
+                printf("Carta 1 vence!\n");
+            else if (densidade2 < densidade1)
+                printf("Carta 2 vence!\n");
+            else
+                printf("Empate!\n");
+            break;
+
+        case 6:
+            printf("PIB per capita: %.2lf vs %.2lf\n", percap1, percap2);
+            if (percap1 > percap2)
+                printf("Carta 1 vence!\n");
+            else if (percap2 > percap1)
+                printf("Carta 2 vence!\n");
+            else
+                printf("Empate!\n");
+            break;
+
+        case 7:
+            printf("Super Poder: %.2lf vs %.2lf\n", superPoder1, superPoder2);
+            if (superPoder1 > superPoder2)
+                printf("Carta 1 vence!\n");
+            else if (superPoder2 > superPoder1)
+                printf("Carta 2 vence!\n");
+            else
+                printf("Empate!\n");
+            break;
+
+        default:
+            printf("Opção inválida! Por favor, escolha um número de 1 a 7.\n");
+            break;
+    }
+
     return 0;
 }
